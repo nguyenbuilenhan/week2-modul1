@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>check month if thang 2 co 28 hoac 29 ngay, cac thang con lai 30 hay 31 ngay</title>
+</head>
+
+<body>
+    <h2>check Month</h2>
+
+    <input type="number" min="1" max="12" id="month" style="font-size: 20px; padding: 10px 20px; width: 20%;"
+        placeholder="Input Month check" id="month">
+    <button onclick="showDate()">Check</button>
+    <p id="show" style="font-size: 20px;">Show here</p>
+    <script>
+        let thang_1 = "1";
+        let thang_2 = "2";
+        let thang_3 = "3";
+        let thang_4 = "4";
+        let thang_5 = "5";
+        let thang_6 = "6";
+        let thang_7 = "7";
+        let thang_8 = "8";
+        let thang_9 = "9";
+        let thang_10 = "10";
+        let thang_11 = "11";
+        let thang_12 = "12";
+        function showDate() {
+            let month = document.getElementById("month").value;
+            switch (month) {
+                case thang_1:
+                case thang_3:
+                case thang_5:
+                case thang_7:
+                case thang_8:
+                case thang_10:
+                case thang_12:
+                    document.getElementById("show").innerHTML = "Thang " + month + " co 31 ngay"
+                    break;
+                case thang_4:
+                case thang_6:
+                case thang_9:
+                case thang_11:
+                    document.getElementById("show").innerHTML = "Thang " + month + " co 30 ngay";
+                    break;
+                case thang_2:
+                    document.getElementById("show").innerHTML = "Thang " + month + " co 28 or 29 ngay";
+                    break;
+            }
+        }
+    </script>
+</body>
+
+</html>
