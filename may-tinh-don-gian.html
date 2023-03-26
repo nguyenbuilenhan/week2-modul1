@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>may tinh casio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -moz-box-sizing: border-box;
+        }
+
+        body {
+            background-color: black;
+        }
+
+        div {
+            background-color: black;
+            color: cyan;
+            width: 350px;
+            text-align: center;
+        }
+        #view{
+            display: inline-block;
+            width: 95%;
+        }
+        button {
+            width: 60px;
+            height: 60px;
+            margin: 10px;
+            border-radius: 10px;
+            font-size: 25px;
+            background-color: black;
+            color: cyan;
+            border: 0.5px solid cyan;
+        }
+    </style>
+</head>
+
+<body>
+    <div style=" padding: 5px;  margin: 100px auto; border: 2px solid rgb(0,183,183); border-radius: 10px;">
+        <p>FX-50000000000</p>
+        <br>
+        <input type="text" id="view" style=" height: 50px; border: 1px solid cyan; border-radius: 5px; color: cyan; font-size: 40px; background-color: black;">
+        <br>
+        <button type="button" name="btn" value="1" onclick="inputValue(this.value)"> 1 </button>
+        <button type="button" name="btn" value="2" onclick="inputValue(this.value)"> 2 </button>
+        <button type="button" name="btn" value="3" onclick="inputValue(this.value)"> 3 </button>
+        <button type="button" name="op" value="+" onclick="inputValue(this.value)"> + </button>
+        <br>
+        <button type="button" name="btn" value="1" onclick="inputValue(this.value)"> 4 </button>
+        <button type="button" name="btn" value="2" onclick="inputValue(this.value)"> 5 </button>
+        <button type="button" name="btn" value="3" onclick="inputValue(this.value)"> 6 </button>
+        <button type="button" name="op" value="-" onclick="inputValue(this.value)"> - </button>
+        <br>
+        <button type="button" name="btn" value="1" onclick="inputValue(this.value)"> 7 </button>
+        <button type="button" name="btn" value="2" onclick="inputValue(this.value)"> 8 </button>
+        <button type="button" name="btn" value="3" onclick="inputValue(this.value)"> 9 </button>
+        <button type="button" name="op" value="*" onclick="inputValue(this.value)"> * </button>
+        <br>
+        <button type="button" onclick="xoa();"> AC </button>
+        <button type="button" name="btn" onclick="inputValue(this.value)"> 0 </button>
+        <button name="reusult" onclick="result();"> = </button></td>
+        <button type="button" name="op" value="/" onclick="inputValue(this.value)"> / </button>
+    </div>
+</body>
+
+</html>
+
+<script>
+    let view = document.getElementById("view");
+    function inputValue(value) {
+        view.value += value;
+    }
+    function result() {
+        let result = eval(view.value);
+        view.value = result;
+    }
+    function xoa() {
+        view.value = "";
+    }
+</script>
