@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bang cuu chuong</title>
+    <style>
+        table{
+            font-weight: bold;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Bang cuu chuong</h1>
+</body>
+<script>
+    let nhan,a,b;
+    nhan = "<table border='1' cellpadding='10' cellspacing='0'>";
+    for(a=1;a<=10;a++){
+        nhan = nhan+"<tr>";
+            for(b=1;b<=10;b++){
+                nhan = nhan +"<td>" + a + "*" + b + " = " + a*b +"</td>"
+            }
+        nhan = nhan + "</tr>";
+    }
+    nhan = nhan + "<table>";
+    document.write(nhan);
+</script>
+</html>
