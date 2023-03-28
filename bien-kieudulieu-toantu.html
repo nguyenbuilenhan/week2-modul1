@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bien kieu du lieu va toan tu</title>
+   
+</head>
+<body>
+   <script>
+    inputVatly = prompt('Nhap dem mon vat ly');
+    inputHoahoc = prompt("nhap diem mon hoa hoc:");
+    inputSinhHoc = prompt("Nhap diem mom Sinh Hoc");
+    var vatLy = parseInt(inputVatly);
+    var hoaHoc = parseInt(inputHoahoc);
+    var sinhHoc = parseInt(inputSinhHoc);
+    var diemTrungBinh = (vatLy + hoaHoc + sinhHoc)/ 2;
+    var diemTong = vatLy+hoaHoc+sinhHoc;
+
+    alert("tong diem 3 mon la: " + diemTong +"\n" + "diem trung binh 3 mon la " + diemTrungBinh);
+
+    //chuyen doi nhiet do
+
+    inputC = prompt('nhap nhiet do 0C can chuyen doi');
+    var c = parseInt(inputC);
+    var f = c * 9/5 +32  
+
+    alert(c+"C chuyen sang F la: "+f);
+
+    //tinh dien tich hinh tron
+    var pi = 3.14;
+    inputD = prompt("nhap duong kinh hinh tron");
+    var d = parseInt(inputD);
+    var c = d*pi;
+    var s = (d/2)*4*pi;
+    alert("chu vi hinh trong la: "+c +"\n" +"Dien tich hinh tron la: "+s);
+   </script> 
+</html>
+
+
