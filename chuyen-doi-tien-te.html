@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chuyen doi tien te</title>
+</head>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        table{
+            text-align: center;
+        }
+        input{
+            font-size: 16px;
+        }
+        select, option{
+            font-size: 16px;
+        }
+    </style>
+<body>
+    <table width="500px" cellspacing="10">
+        <tr>
+            <th>Amount</th>
+            <th>Form Curency</th>
+            <th>To Curency</th>
+        </tr>
+        <tr>
+            <td><input type="" id="addAmount" style="width: 100%;" ></td>
+            <td>
+                <select name="" id="formCurency">
+                    <option value="VND">VND</option>
+                    <option value="USD">USD</option>
+                </select>
+            </td>
+
+            <td>
+                <select name="" id="toCurency">
+                    <option value="USD">USD</option>
+                    <option value="VND">VND</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <th>Result</th>
+        </tr>
+        <tr>
+            <td><input type="number" id="result" style="width: 100%"></td>
+        </tr>
+    </table>
+    <button onclick="complete()" style="font-size: 20px; padding: 5px; margin-left: 20px;">Submit</button>
+</body>
+
+<script>
+
+    function complete(){
+        let addAmount = document.getElementById("addAmount").value;
+        let formCurency = document.getElementById("formCurency").value;
+        let toCurency = document.getElementById("toCurency").value;
+
+            if(formCurency=="VND" && toCurency=="USD"){
+            document.getElementById("result").value= addAmount/23000 ;
+            }else if(formCurency == "USD" && toCurency=="VND"){
+                document.getElementById("result").value = addAmount*23000;
+            }else if (formCurency == toCurency){
+                document.getElementById("result").value = addAmount;
+            }
+    }
+</script>
+
+</html>
